@@ -16,17 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5kh-72-B2Z">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Weh-Lj-WHw">
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
-                            </imageView>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j16-5v-kAe">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5kh-72-B2Z">
+                                        <rect key="frame" x="0.0" y="46" width="393" height="703"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5kh-72-B2Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H2e-OZ-pta"/>
-                            <constraint firstItem="5kh-72-B2Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QvK-Hq-K1H"/>
-                            <constraint firstAttribute="bottom" secondItem="5kh-72-B2Z" secondAttribute="bottom" id="fP5-xD-Rza"/>
-                            <constraint firstItem="5kh-72-B2Z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hvw-Mh-MT7"/>
+                            <constraint firstAttribute="bottom" secondItem="Weh-Lj-WHw" secondAttribute="bottom" id="47I-NS-u0m"/>
+                            <constraint firstItem="Weh-Lj-WHw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Q7G-SB-zwq"/>
+                            <constraint firstItem="Weh-Lj-WHw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Uos-5b-rZK"/>
+                            <constraint firstItem="Weh-Lj-WHw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V06-ch-fLi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hjO-FN-l2K">
@@ -38,6 +49,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="photoView" destination="5kh-72-B2Z" id="5xl-dc-LkQ"/>
+                        <outlet property="resultsLabel" destination="j16-5v-kAe" id="fib-fh-9ec"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
